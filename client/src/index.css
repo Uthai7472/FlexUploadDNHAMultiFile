@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0; /* Add padding to reset padding as well */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+}

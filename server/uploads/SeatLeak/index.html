@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap 5 Table Example</title>
+</head>
+<body>
+
+    <a href="/see_add_lists">ดู/เพิ่มรายการทั้งหมด</a>
+
+<div class="container mt-5">
+    <h2>Bootstrap 5 Table Example</h2>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>หมวดหมู่</th>
+                <th>ราคารวม</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in datas %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td><a href="{{ url_for('list_details', category=data[1]) }}">{{data[1]}}</a></td>
+                <td>{{ data[2] }}</td>
+            </tr>
+            {% endfor %}
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
